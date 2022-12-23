@@ -27,6 +27,7 @@
             android:id="@+id/zoom_file_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
             android:text="zoom"
             app:layout_constraintEnd_toStartOf="@+id/upload_file_btn"
             app:layout_constraintHorizontal_bias="0.0"

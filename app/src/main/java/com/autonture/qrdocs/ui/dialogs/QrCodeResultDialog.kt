@@ -4,17 +4,21 @@ import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.ClipData
 import android.content.Context
-import android.content.Intent
 import android.net.Uri
 import android.provider.Settings.Global.getString
 import android.text.ClipboardManager
 import android.util.Log
+import android.widget.Button
 import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
+import androidx.fragment.app.DialogFragment
 import com.autonture.qrdocs.R
 import com.autonture.qrdocs.db.DbHelper
 import com.autonture.qrdocs.db.DbHelperI
 import com.autonture.qrdocs.db.database.QrResultDataBase
 import com.autonture.qrdocs.db.entities.QrResult
+import com.autonture.qrdocs.ui.mainactivity.MainActivity
+import com.autonture.qrdocs.ui.zoomfile.ZoomFileActivity
 import com.autonture.qrdocs.utils.ContentCheckUtil
 import com.autonture.qrdocs.utils.ContentCheckUtil.isWebUrl
 import com.autonture.qrdocs.utils.toFormattedDisplay
@@ -23,16 +27,15 @@ import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
 import org.json.JSONObject
 import java.net.URL
+import android.content.Intent as Intent
 
 
-/**
- * Developed by Happy on 3/7/19
- */
-class QrCodeResultDialog(var context: Context) {
+class QrCodeResultDialog (var context: Context) {
 
     private lateinit var dialog: Dialog
 
     private lateinit var dbHelperI: DbHelperI
+    private lateinit var Main: MainActivity
 
     private var qrResult: QrResult? = null
 
@@ -62,6 +65,9 @@ class QrCodeResultDialog(var context: Context) {
                 removeFromFavourite()
             } else
                 addToFavourite()
+        }
+        dialog.saveIcon.setOnClickListener {
+            OpenZoomActivity()
         }
 
         dialog.copyResult.setOnClickListener {
@@ -97,18 +103,18 @@ class QrCodeResultDialog(var context: Context) {
     fun show(recentQrResult: QrResult) {
         this.qrResult = recentQrResult
         dialog.scannedDate.text = qrResult?.calendar?.toFormattedDisplay()
-        dialog.scannedText.text = "QR Code: " + qrResult!!.result
+        dialog.scannedText.text = "QR code in ${"QR-DOCS"} app: " + qrResult!!.result
         dialog.favouriteIcon.isSelected = qrResult!!.favourite
         dialog.show()
 
-        // Fetch Qr code Data via api
+
         val url = "https://qr-scanner-api.herokuapp.com/api/user/" + qrResult!!.result
         dialog.userInfo1.text = ""
         dialog.userInfo2.text = context.getString(R.string.loading);
         dialog.userInfo3.text = ""
         dialog.userInfo4.text = ""
 
-        // Run in another thread until completion to avoid thread blocking
+
         doAsync{
             val json = URL(url).readText()
             uiThread {
@@ -150,7 +156,9 @@ class QrCodeResultDialog(var context: Context) {
         clipboard.text = clip.getItemAt(0).text.toString()
         Toast.makeText(context, "Copied to clipboard", Toast.LENGTH_SHORT).show()
     }
+    private fun OpenZoomActivity(){
 
+    }
     private fun shareResult() {
         val txtIntent = Intent(Intent.ACTION_SEND)
         txtIntent.type = "text/plain"
@@ -165,7 +173,7 @@ class QrCodeResultDialog(var context: Context) {
         fun onDismiss()
     }
 
-    // Checking content type and performing action on it.
+
     private fun checkContentAndPerformAction(scannedText: String) {
         when {
 

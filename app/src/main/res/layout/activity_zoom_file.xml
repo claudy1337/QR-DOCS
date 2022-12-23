@@ -31,10 +31,11 @@
             app:hasClickableChildren="false">
 
         <ImageView
+                android:id="@+id/image_result"
                 android:layout_width="416dp"
                 android:layout_height="742dp"
                 android:layout_gravity="center"
-                android:src="@drawable/selector_flash_on_off"/>
+                android:src="@drawable/ic_waiting_get_file"/>
 
     </com.otaliastudios.zoom.ZoomLayout>
 </LinearLayout>

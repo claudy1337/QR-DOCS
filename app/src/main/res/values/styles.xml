@@ -6,11 +6,12 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
     </style>
 
     <style name="BottomMenuActiveItem" parent="Widget.MaterialComponents.BottomNavigationView">
-        <item name="itemTextColor">@color/white</item>
-        <item name="itemIconTint">@color/white</item>
+        <item name="itemTextColor">@color/colorPrimary</item>
+        <item name="itemIconTint">@color/colorPrimary</item>
     </style>
 
 

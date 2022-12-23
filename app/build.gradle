@@ -27,6 +27,9 @@ android {
 dependencies {
     implementation 'com.otaliastudios:zoomlayout:1.6.1'
 
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.pixplicity.sharp:library:1.1.0'
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.0.2'

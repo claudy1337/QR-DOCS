@@ -27,6 +27,10 @@
         <activity android:name=".ui.scan_profile.ScanProfileActivity"/>
         <activity android:name=".ui.qrupload.UploadQrActivity"/>
         <activity android:name=".ui.zoomfile.ZoomFileActivity"/>
+
+        <meta-data
+                android:name="preloaded_fonts"
+                android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
