@@ -1,6 +1,7 @@
 package com.autonture.qrdocs.ui.qrscanner
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -14,6 +15,8 @@ import com.autonture.qrdocs.db.DbHelper
 import com.autonture.qrdocs.db.DbHelperI
 import com.autonture.qrdocs.db.database.QrResultDataBase
 import com.autonture.qrdocs.ui.dialogs.QrCodeResultDialog
+import com.autonture.qrdocs.ui.scan_profile.ScanProfileActivity
+import kotlinx.android.synthetic.main.fragment_qrscanner.*
 import kotlinx.android.synthetic.main.fragment_qrscanner.view.*
 import me.dm7.barcodescanner.zbar.Result
 import me.dm7.barcodescanner.zbar.ZBarScannerView
@@ -41,6 +44,7 @@ class QRScannerFragment : Fragment(), ZBarScannerView.ResultHandler {
         initViews()
         onClicks()
         return mView.rootView
+
     }
 
     private fun init() {
@@ -116,6 +120,7 @@ class QRScannerFragment : Fragment(), ZBarScannerView.ResultHandler {
                 onFlashLight()
             }
         }
+
     }
 
     private fun onFlashLight() {

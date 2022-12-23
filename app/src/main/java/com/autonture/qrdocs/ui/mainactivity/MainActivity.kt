@@ -1,10 +1,13 @@
 package com.autonture.qrdocs.ui.mainactivity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.autonture.qrdocs.R
+import com.autonture.qrdocs.ui.scan_profile.ScanProfileActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_qrscanner.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         setViewPager()
         setBottomViewListener()
         setViewPagerListener()
+
     }
 
 

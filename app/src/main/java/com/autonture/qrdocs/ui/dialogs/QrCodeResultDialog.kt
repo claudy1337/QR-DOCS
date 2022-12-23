@@ -4,12 +4,14 @@ import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.ClipData
 import android.content.Context
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.provider.Settings.Global.getString
 import android.text.ClipboardManager
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
 import androidx.fragment.app.DialogFragment
 import com.autonture.qrdocs.R
@@ -159,6 +161,7 @@ class QrCodeResultDialog (var context: Context) {
     private fun OpenZoomActivity(){
 
     }
+
     private fun shareResult() {
         val txtIntent = Intent(Intent.ACTION_SEND)
         txtIntent.type = "text/plain"

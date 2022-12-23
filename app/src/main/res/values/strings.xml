@@ -32,8 +32,8 @@
     <string name="scan_qr_profile">Scan OR code</string>
     <string name="author">autonture</string>
     <string name="scan_qr">Scan OR code</string>
-    <string name="recommendations_scan">Place qr code inside the frame to scan please
-        avoid shake to get results quickly</string>
+    <string name="recommendations_scan">Place qr code inside the frame to scan please</string>
+    <string name="recommendations_scan_2">avoid shake to get results quickly</string>
     <string name="scanning_time">Scanning Code...</string>
     <string name="history">Scanning History</string>
     <string name="today">Today</string>

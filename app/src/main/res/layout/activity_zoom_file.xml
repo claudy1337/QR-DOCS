@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.zoomfile.ZoomFileActivity">
+        tools:context=".ui.zoomfile.ZoomFileActivity"
+        android:background="@android:color/transparent">
+
+    <Button
+            android:drawableStart="@drawable/ic_backmenu_black"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:id="@+id/exit_zoom_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     <com.otaliastudios.zoom.ZoomLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -25,17 +37,20 @@
             app:threeFingersScrollEnabled="true"
             app:minZoom="0.5"
             app:minZoomType="zoom"
-            app:maxZoom="3.5"
+            app:maxZoom="10.5"
             app:maxZoomType="zoom"
             app:animationDuration="280"
             app:hasClickableChildren="false">
 
         <ImageView
                 android:id="@+id/image_result"
-                android:layout_width="416dp"
-                android:layout_height="742dp"
+                android:layout_width="406dp"
+                android:layout_height="843dp"
+                android:layout_centerInParent="true"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_waiting_get_file"/>
+                android:src="@drawable/waiting_for_help_waiting"
+                tools:ignore="MissingConstraints" />
 
     </com.otaliastudios.zoom.ZoomLayout>
-</LinearLayout>
+
+</FrameLayout>

@@ -16,6 +16,7 @@ import androidx.core.app.ActivityCompat
 import com.autonture.qrdocs.ui.mainactivity.MainActivity
 import com.autonture.qrdocs.R
 import com.autonture.qrdocs.ui.scan_profile.ScanProfileActivity
+import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity() {
 
@@ -26,6 +27,7 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+        animStarter()
         Handler().postDelayed({
             checkForPermission()
         }, 2000)
@@ -100,5 +102,12 @@ class SplashActivity : AppCompatActivity() {
     override fun onRestart() {
         super.onRestart()
         checkForPermission()
+    }
+    private fun animStarter() {
+        setContentView(R.layout.activity_splash)
+        appCompatImageView.alpha = 0F
+        appCompatImageView.animate().setDuration(1500).alpha(1f).withEndAction {
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+        }
     }
 }
