@@ -3,7 +3,7 @@
 
     <item android:id="@+id/qrScanMenuId"
           android:title="@string/scan"
-          android:icon="@drawable/ic_qr_code"
+          android:icon="@drawable/ic_logo"
     />
 
     <item android:id="@+id/scannedResultMenuId"

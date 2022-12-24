@@ -5,7 +5,7 @@
     <string name="recent_scanned">Recent Scanned</string>
     <string name="recent_scanned_results">Recent Scanned Results</string>
     <string name="favourites_scanned_results">Favourite Scanned Results</string>
-    <string name="favourites">favourites</string>
+    <string name="favourites">Favourites</string>
 
     <string name="grant">Grant</string>
     <string name="loading">Loading</string>
@@ -41,8 +41,10 @@
     <string name="history_description">history of all codes scanned</string>
     <string name="no_result">NO RESULT</string>
     <string name="Upload">Upload QR CODE</string>
-
-
+    <string name="preview_generate">Generate QR Code</string>
+    <string name="generate">Generate</string>
+    <string name="download">Download</string>
+    <string name="url_text">URL or Text</string>
     <string name="history_information_1">Proreader will Keep your last all days history</string>
     <string name="history_information_2">to keep your all scared history please</string>
     <string name="history_information_3">purched our pro package</string>

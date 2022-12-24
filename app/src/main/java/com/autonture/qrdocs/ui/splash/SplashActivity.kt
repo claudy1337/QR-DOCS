@@ -8,6 +8,7 @@ import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.FileObserver.ACCESS
 import android.os.Handler
 import android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS
 import android.widget.Toast
@@ -22,6 +23,8 @@ class SplashActivity : AppCompatActivity() {
 
     companion object {
         private const val CAMERA_PERMISSION_REQUEST_CODE = 102
+        private const val ACCESS_NETWORK_STATE_PERMISSION_REQUEST_CODE = 112
+        private const val WRITE_EXTERNAL_STORAGE_PERMISSION_REQUEST_CODE = 122
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,10 +46,7 @@ class SplashActivity : AppCompatActivity() {
 
 
     private fun requestPermission() {
-        ActivityCompat.requestPermissions(
-            this, arrayOf(Manifest.permission.CAMERA),
-            CAMERA_PERMISSION_REQUEST_CODE
-        )
+        ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA), CAMERA_PERMISSION_REQUEST_CODE)
     }
 
     private fun gotToScanProfileActivity() {
