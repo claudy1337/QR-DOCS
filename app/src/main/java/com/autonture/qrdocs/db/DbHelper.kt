@@ -4,9 +4,6 @@ import com.autonture.qrdocs.db.database.QrResultDataBase
 import com.autonture.qrdocs.db.entities.QrResult
 import java.util.*
 
-/**
- * Developed by Happy on 5/7/19
- */
 class DbHelper(var qrResultDataBase: QrResultDataBase) : DbHelperI {
 
     override fun insertQRResult(result: String): Int {

@@ -16,8 +16,11 @@ import com.autonture.qrdocs.db.DbHelperI
 import com.autonture.qrdocs.db.database.QrResultDataBase
 import com.autonture.qrdocs.ui.dialogs.QrCodeResultDialog
 import com.autonture.qrdocs.ui.scan_profile.ScanProfileActivity
+import com.autonture.qrdocs.utils.inVisible
 import kotlinx.android.synthetic.main.fragment_qrscanner.*
 import kotlinx.android.synthetic.main.fragment_qrscanner.view.*
+import kotlinx.android.synthetic.main.layout_qr_result_show.*
+import kotlinx.android.synthetic.main.layout_single_item_qr_result.view.*
 import me.dm7.barcodescanner.zbar.Result
 import me.dm7.barcodescanner.zbar.ZBarScannerView
 
@@ -68,6 +71,7 @@ class QRScannerFragment : Fragment(), ZBarScannerView.ResultHandler {
         scannerView.setAutoFocus(true)
         startQRCamera()
         mView.containerScanner.addView(scannerView)
+
     }
 
     private fun setResultDialog() {
@@ -98,6 +102,8 @@ class QRScannerFragment : Fragment(), ZBarScannerView.ResultHandler {
     private fun saveToDataBase(contents: String) {
         val insertedResultId = dbHelperI.insertQRResult(contents)
         val qrResult = dbHelperI.getQRResult(insertedResultId)
+
+
         resultDialog.show(qrResult)
     }
 

@@ -15,7 +15,6 @@ import com.autonture.qrdocs.utils.toFormattedDisplay
 import com.autonture.qrdocs.utils.visible
 import kotlinx.android.synthetic.main.layout_single_item_qr_result.view.*
 
-
 class ScannedResultListAdapter(
     var dbHelperI: DbHelperI,
     var context: Context,
@@ -64,7 +63,6 @@ class ScannedResultListAdapter(
             else
                 view.favouriteIcon.gone()
         }
-
 
 
         private fun onClicks(qrResult: QrResult, position: Int) {

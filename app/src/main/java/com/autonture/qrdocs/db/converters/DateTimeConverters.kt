@@ -4,9 +4,7 @@ import androidx.room.TypeConverter
 import java.util.*
 
 
-/**
- * Developed by Happy on 5/7/19
- */
+
 class DateTimeConverters {
     @TypeConverter
     fun toCalendar(l: Long): Calendar? {

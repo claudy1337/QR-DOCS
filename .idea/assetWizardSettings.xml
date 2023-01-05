@@ -305,8 +305,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_plus" />
-                            <entry key="sourceFile" value="C:\Users\claud\OneDrive\Рабочий стол\save\qr\plus.svg" />
+                            <entry key="outputName" value="ic_update_off" />
+                            <entry key="sourceFile" value="C:\Users\claud\OneDrive\Рабочий стол\save\qr\update_off.svg" />
                           </map>
                         </option>
                       </PersistentState>

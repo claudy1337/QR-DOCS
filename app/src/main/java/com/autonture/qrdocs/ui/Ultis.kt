@@ -1,12 +1,17 @@
 package com.autonture.qrdocs.ui
 
 import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.os.Handler
+import android.os.Looper
 import android.widget.ImageView
 import com.autonture.qrdocs.R
 import com.pixplicity.sharp.Sharp
 import okhttp3.*
 import java.io.IOException
 import java.io.InputStream
+import java.util.concurrent.Executors
 
 class Ultis {
     private var httpClient: OkHttpClient? = null
@@ -29,5 +34,24 @@ class Ultis {
                 stream.close()
             }
         })
+    }
+    fun fetchOtherFormat(url: String, target: ImageView){
+        val executor = Executors.newSingleThreadExecutor()
+        val handler = Handler(Looper.getMainLooper())
+        var image: Bitmap? = null
+        executor.execute {
+            val imageURL = url
+            try {
+                val `in` = java.net.URL(imageURL).openStream()
+                image = BitmapFactory.decodeStream(`in`)
+                handler.post {
+                    target.setImageBitmap(image)
+                }
+            }
+            catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+
     }
 }

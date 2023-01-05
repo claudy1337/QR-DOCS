@@ -3,9 +3,7 @@ package com.autonture.qrdocs.db.dao
 import androidx.room.*
 import com.autonture.qrdocs.db.entities.QrResult
 
-/**
- * Developed by Happy on 4/7/19
- */
+
 @Dao
 interface QrResultDao {
 

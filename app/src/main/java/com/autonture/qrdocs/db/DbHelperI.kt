@@ -2,9 +2,7 @@ package com.autonture.qrdocs.db
 
 import com.autonture.qrdocs.db.entities.QrResult
 
-/**
- * Developed by Happy on 5/7/19
- */
+
 interface DbHelperI {
 
     fun insertQRResult(result: String): Int

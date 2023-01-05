@@ -8,9 +8,7 @@ import com.autonture.qrdocs.db.entities.QrResult
 import androidx.room.Room
 
 
-/**
- * Developed by Happy on 5/7/19
- */
+
 @Database(entities = [QrResult::class], version = 1,exportSchema = false)
 abstract class QrResultDataBase : RoomDatabase() {
     abstract fun getQrDao(): QrResultDao

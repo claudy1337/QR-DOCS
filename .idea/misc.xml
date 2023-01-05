@@ -12,6 +12,7 @@
         <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/drawable/backround_button.xml" value="0.152" />
         <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/drawable/backround_bytton_black.xml" value="0.1695" />
         <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/drawable/ic_backmenu.xml" value="0.1695" />
+        <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/drawable/ic_backmenu_black.xml" value="0.1695" />
         <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/drawable/ic_content_copy_white_24dp.xml" value="0.1295" />
         <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/drawable/ic_download_file.xml" value="0.1" />
         <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/drawable/ic_download_file_white.xml" value="0.1295" />
@@ -20,18 +21,21 @@
         <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1695" />
         <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/drawable/ic_logo.xml" value="0.1695" />
         <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/drawable/ic_successfully_download.xml" value="0.1" />
+        <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/drawable/ic_update.xml" value="0.1695" />
+        <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/drawable/ic_update_on.xml" value="0.1695" />
         <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/drawable/selector_backmenu.xml" value="0.1695" />
         <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/drawable/selector_download_on_off.xml" value="0.1" />
         <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/drawable/selector_favourite.xml" value="0.1" />
         <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/drawable/selector_flash_on_off.xml" value="0.1695" />
+        <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/drawable/selector_update_on_off.xml" value="0.2" />
         <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/font/inter_medium.xml" value="0.28020833333333334" />
-        <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/layout/activity_generate_qr_code.xml" value="0.264" />
+        <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/layout/activity_generate_qr_code.xml" value="0.2" />
         <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/layout/activity_main.xml" value="0.16" />
-        <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/layout/activity_scan_profile.xml" value="0.6" />
+        <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/layout/activity_scan_profile.xml" value="0.2" />
         <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/layout/activity_splash.xml" value="0.25" />
         <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/layout/activity_upload_file.xml" value="0.264" />
         <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/layout/activity_zoom_file.xml" value="0.264" />
-        <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/layout/fragment_qrscanner.xml" value="0.15085470085470085" />
+        <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/layout/fragment_qrscanner.xml" value="0.176" />
         <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/layout/fragment_scann_history.xml" value="0.1761436511329628" />
         <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/layout/fragment_scanned_history.xml" value="0.2" />
         <entry key="..\:/Users/claud/Downloads/QR-DOC-master/app/src/main/res/layout/layout_header_history.xml" value="0.264" />

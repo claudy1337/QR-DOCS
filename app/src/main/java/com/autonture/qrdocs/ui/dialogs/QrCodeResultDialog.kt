@@ -11,6 +11,7 @@ import android.text.ClipboardManager
 import android.util.Log
 import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
+import androidx.core.view.isVisible
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.autonture.qrdocs.R
@@ -23,7 +24,10 @@ import com.autonture.qrdocs.ui.mainactivity.MainActivity
 import com.autonture.qrdocs.ui.qrscanner.QRScannerFragment
 import com.autonture.qrdocs.ui.zoomfile.ZoomFileActivity
 import com.autonture.qrdocs.utils.ContentCheckUtil.isWebUrl
+import com.autonture.qrdocs.utils.inVisible
 import com.autonture.qrdocs.utils.toFormattedDisplay
+import com.autonture.qrdocs.utils.visible
+import kotlinx.android.synthetic.main.activity_scan_profile.view.*
 import kotlinx.android.synthetic.main.layout_qr_result_show.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
@@ -46,7 +50,6 @@ class QrCodeResultDialog (var context: Context) {
         initDialog()
     }
 
-
     private fun init() {
         dbHelperI = DbHelper(QrResultDataBase.getAppDatabase(context)!!)
     }
@@ -67,8 +70,8 @@ class QrCodeResultDialog (var context: Context) {
                 addToFavourite()
         }
         dialog.saveIcon.setOnClickListener {
+
             val bundle = Bundle()
-            Toast.makeText(context, "${qrResult!!.result}", Toast.LENGTH_LONG).show()
             val intent = Intent(context, ZoomFileActivity::class.java)
             bundle.putString("link", qrResult!!.result.toString())
             intent.putExtras(bundle)
